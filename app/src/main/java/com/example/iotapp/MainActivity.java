@@ -50,19 +50,9 @@ public class MainActivity extends AppCompatActivity {
         onbutton = findViewById(R.id.onbtn);
         offbutton = findViewById(R.id.offbtn);
 
-
-
-
-
-
-
-
-
         onbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
 
                     FirebaseDatabase.getInstance().getReference("led1").setValue(1);
                     Toast.makeText(MainActivity.this, "Turned On Led",Toast.LENGTH_LONG).show();
@@ -78,13 +68,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-
     }
-
-
-
-
-
 }
