@@ -9,10 +9,10 @@ int servoPin = 2;
 //Servo Servo1;
 
 #define WIFI_SSID "Vicky"
-#define WIFI_PASSWORD "oyevicks"
+#define WIFI_PASSWORD "*******"
 
 #define FIREBASE_HOST "led-blink-wifi-default-rtdb.firebaseio.com"
-#define FIREBASE_AUTH "VvFhb5Ij53hPmECwjzf3lxmtXXUA7a0SqW34CNSa"
+#define FIREBASE_AUTH "*****************************************"
 
 FirebaseData firebaseData;
 
