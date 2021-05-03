@@ -1,17 +1,18 @@
 //https://console.firebase.google.com/u/0/project/led-blink-wifi/database/led-blink-wifi-default-rtdb/data
+//https://console.firebase.google.com/u/0/project/led-blink-wifi/settings/serviceaccounts/databasesecrets
 
-#include <ESP8266WiFi.h>
-#include "FirebaseESP8266.h"
+#include <WiFi.h>
+#include "FirebaseESP32.h"
 //#include <Servo.h>
 
 int servoPin = 2;
 //Servo Servo1;
 
 #define WIFI_SSID "Vicky"
-#define WIFI_PASSWORD "*******"
+#define WIFI_PASSWORD "oyevicks"
 
 #define FIREBASE_HOST "led-blink-wifi-default-rtdb.firebaseio.com"
-#define FIREBASE_AUTH "*****************************************"
+#define FIREBASE_AUTH "VvFhb5Ij53hPmECwjzf3lxmtXXUA7a0SqW34CNSa"
 
 FirebaseData firebaseData;
 
@@ -47,11 +48,14 @@ void loop() {
     if (Firebase.getInt(firebaseData,"/led1"))
     {
       int val2 = (firebaseData.intData());
+      
       if(val2==1){
-        digitalWrite(servoPin, LOW);
-        Serial.println("HIGH");
-      }else{
         digitalWrite(servoPin, HIGH);
+        Serial.println("HIGH");
+      }
+      
+      else{
+        digitalWrite(servoPin, LOW);
         Serial.println("LOW");
       }
 
