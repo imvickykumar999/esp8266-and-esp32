@@ -16,6 +16,7 @@ def push(data):
     firebase_obj.put('/','led1', data)
     print('\nUpdated...\n')
 
+push(1)
 
 # Running in CMD like...
 #
